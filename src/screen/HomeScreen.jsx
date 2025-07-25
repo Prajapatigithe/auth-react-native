@@ -32,7 +32,7 @@ const HomeScreen = () => {
         </TouchableOpacity>
 
         <TouchableOpacity style={[styles.loginButtonWrapper, { backgroundColor: Colors.primary }]} onPress={handleSignup}>
-          <Text style={styles.signUpButtonText}>Sign-Up</Text>
+          <Text style={styles.signUpButtonText}>Sign Up</Text>
         </TouchableOpacity>
       </View>
     </View>
