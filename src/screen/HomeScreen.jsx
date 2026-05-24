@@ -1,18 +1,18 @@
 import { StyleSheet, Text, View, Image, TouchableOpacity } from 'react-native';
 import React from 'react';
 import { fonts } from '../utils/fonts';
-import { Colors } from '../utils/color'; // assuming you have Colors defined
+import { Colors } from '../utils/color';
 import { useNavigation } from '@react-navigation/native';
 
 const HomeScreen = () => {
   const Navigation = useNavigation();
 
   const handleLogin = () => {
-    Navigation.navigate("LOGIN");
-  }
+    Navigation.navigate('LOGIN');
+  };
 
   const handleSignup = () => {
-    Navigation.navigate("SIGNUP");
+    Navigation.navigate('SIGNUP');
   };
 
   return (
@@ -26,20 +26,29 @@ const HomeScreen = () => {
       </Text>
 
       <View style={styles.buttonContainer}>
-        <TouchableOpacity style={[styles.loginButtonWrapper, { backgroundColor: Colors.primary }]}
-          onPress={handleLogin}>
+        <TouchableOpacity
+          style={[
+            styles.loginButtonWrapper,
+            { backgroundColor: Colors.primary },
+          ]}
+          onPress={handleLogin}
+        >
           <Text style={styles.loginButtonText}>Login</Text>
         </TouchableOpacity>
 
-        <TouchableOpacity style={[styles.loginButtonWrapper, { backgroundColor: Colors.primary }]} onPress={handleSignup}>
+        <TouchableOpacity
+          style={[
+            styles.loginButtonWrapper,
+            { backgroundColor: Colors.primary },
+          ]}
+          onPress={handleSignup}
+        >
           <Text style={styles.signUpButtonText}>Sign Up</Text>
         </TouchableOpacity>
       </View>
     </View>
   );
 };
-
-
 
 export default HomeScreen;
 
@@ -83,7 +92,7 @@ const styles = StyleSheet.create({
     width: '90%',
     height: 50,
     borderRadius: 100,
-    marginTop: 60
+    marginTop: 60,
   },
   loginButtonWrapper: {
     justifyContent: 'center',
