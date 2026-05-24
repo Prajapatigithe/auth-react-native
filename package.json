@@ -10,7 +10,7 @@
     "test": "jest",
     "prepare": "husky"
   },
-    "lint-staged": {
+  "lint-staged": {
     "*.{js,jsx,ts,tsx}": [
       "prettier --write"
     ]
@@ -24,7 +24,7 @@
     "react": "19.1.0",
     "react-native": "0.80.1",
     "react-native-safe-area-context": "^5.5.2",
-    "react-native-screens": "^4.13.1",
+    "react-native-screens": "^4.11.1",
     "react-native-vector-icons": "^10.3.0"
   },
   "devDependencies": {
