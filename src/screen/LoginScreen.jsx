@@ -1,12 +1,19 @@
-import { StyleSheet, Text, View, TouchableOpacity, TextInput, Image } from 'react-native';
+import {
+  StyleSheet,
+  Text,
+  View,
+  TouchableOpacity,
+  TextInput,
+  Image,
+} from 'react-native';
 import React, { useState } from 'react';
 import { useNavigation } from '@react-navigation/native';
 import Ionicons from 'react-native-vector-icons/Ionicons';
-import Feather from 'react-native-vector-icons/Feather'; // for mail icon
-import SimpleLineIcons from 'react-native-vector-icons/SimpleLineIcons'; // for lock icon
-import AntDesign from 'react-native-vector-icons/AntDesign'; // for lock icon
-import { Colors } from '../utils/color'; // assuming you have Colors defined
-import { fonts } from '../utils/fonts'; // assuming you have fonts defined
+import Feather from 'react-native-vector-icons/Feather';
+import SimpleLineIcons from 'react-native-vector-icons/SimpleLineIcons';
+import AntDesign from 'react-native-vector-icons/AntDesign';
+import { Colors } from '../utils/color';
+import { fonts } from '../utils/fonts';
 
 const LoginScreen = () => {
   const navigation = useNavigation();
@@ -15,9 +22,9 @@ const LoginScreen = () => {
   const handleGoBack = () => {
     navigation.goBack();
   };
-  const handleSignup =()=>{
-    navigation.navigate("SIGNUP");
-  }
+  const handleSignup = () => {
+    navigation.navigate('SIGNUP');
+  };
 
   return (
     <View style={styles.container}>
@@ -48,9 +55,9 @@ const LoginScreen = () => {
             placeholder="Password"
             secureTextEntry={secureEntry}
           />
-          <TouchableOpacity onPress={() => setSecureEntry((prev) => !prev)}>
+          <TouchableOpacity onPress={() => setSecureEntry(prev => !prev)}>
             <AntDesign
-              name={secureEntry ? "eye" : "eye-invisible"}
+              name={secureEntry ? 'eye' : 'eye-invisible'}
               size={20}
               color={Colors.secondary}
             />
@@ -68,7 +75,10 @@ const LoginScreen = () => {
         <Text style={styles.continueText}>or continue with</Text>
 
         <TouchableOpacity style={styles.googleButtonContainer}>
-          <Image source={require('../assets/google.png')} style={styles.googleImage} />
+          <Image
+            source={require('../assets/google.png')}
+            style={styles.googleImage}
+          />
           <Text style={styles.googleText}>Google</Text>
         </TouchableOpacity>
 
@@ -110,7 +120,6 @@ const styles = StyleSheet.create({
   },
   formContainer: {
     marginTop: 20,
-    
   },
   inputContainer: {
     flexDirection: 'row',
@@ -132,7 +141,7 @@ const styles = StyleSheet.create({
     backgroundColor: Colors.primary,
     borderRadius: 100,
     marginTop: 30,
-    padding:10
+    padding: 10,
   },
   loginText: {
     color: Colors.white,
@@ -146,8 +155,8 @@ const styles = StyleSheet.create({
     fontSize: 18,
     fontFamily: fonts.Regular,
     marginVertical: 20,
-    marginTop:30,
-    marginBottom:30,
+    marginTop: 30,
+    marginBottom: 30,
     color: Colors.primary,
   },
   googleButtonContainer: {
@@ -178,12 +187,12 @@ const styles = StyleSheet.create({
   accountText: {
     color: Colors.primary,
     fontFamily: fonts.Regular,
-    fontSize:15
+    fontSize: 15,
   },
   signUpText: {
     color: Colors.primary,
     fontFamily: fonts.SemiBold,
     marginLeft: 10,
-    fontSize:17,
+    fontSize: 17,
   },
 });
